@@ -40,3 +40,134 @@ Processing by PostsController#show as HTML
   [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
   Rendered posts/show.html.erb within layouts/application (0.4ms)
 Completed 200 OK in 27ms (Views: 10.4ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Title Goes Here"], ["description", "desc goes here"], ["created_at", "2020-07-12 13:48:18.097251"], ["updated_at", "2020-07-12 13:48:18.097251"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/" for ::1 at 2020-07-12 08:06:10 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Parameters: {"internal"=>true}
+  Rendering /Users/taylorishimoto/.rvm/gems/ruby-2.6.1/gems/railties-5.0.7.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/taylorishimoto/.rvm/gems/ruby-2.6.1/gems/railties-5.0.7.2/lib/rails/templates/rails/welcome/index.html.erb (2.9ms)
+Completed 200 OK in 15ms (Views: 8.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2020-07-12 08:06:26 -0600
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 297ms (Views: 291.0ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/posts" for ::1 at 2020-07-12 08:06:34 -0600
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0qJqgPb48wqf3yJ1pGZwj22O8Xq95snB2ZHumZiy64g5yGAjMnFYDvlPN9T+V50f08gOVmw7mucRKzt9RU2Pxw==", "title"=>"Oak Glen Maternity Session", "description"=>"bllop", "commit"=>"Submit Post"}
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `parmas' for #<PostsController:0x00007f8eaa125378>
+Did you mean?  params):
+  
+app/controllers/posts_controller.rb:18:in `create'
+  Rendering /Users/taylorishimoto/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/taylorishimoto/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/taylorishimoto/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (1.9ms)
+  Rendering /Users/taylorishimoto/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/taylorishimoto/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendering /Users/taylorishimoto/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/taylorishimoto/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/taylorishimoto/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (22.5ms)
+Started POST "/posts" for ::1 at 2020-07-12 08:06:53 -0600
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0qJqgPb48wqf3yJ1pGZwj22O8Xq95snB2ZHumZiy64g5yGAjMnFYDvlPN9T+V50f08gOVmw7mucRKzt9RU2Pxw==", "title"=>"Oak Glen Maternity Session", "description"=>"bllop", "commit"=>"Submit Post"}
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.5ms)
+
+
+  
+NameError (undefined local variable or method `parmams' for #<PostsController:0x00007f8eaa0e69e8>
+Did you mean?  params
+               params=
+               @_params):
+  
+app/controllers/posts_controller.rb:18:in `create'
+  Rendering /Users/taylorishimoto/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/taylorishimoto/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/taylorishimoto/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (1.8ms)
+  Rendering /Users/taylorishimoto/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/taylorishimoto/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendering /Users/taylorishimoto/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/taylorishimoto/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/taylorishimoto/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (16.2ms)
+Started POST "/posts" for ::1 at 2020-07-12 08:07:04 -0600
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0qJqgPb48wqf3yJ1pGZwj22O8Xq95snB2ZHumZiy64g5yGAjMnFYDvlPN9T+V50f08gOVmw7mucRKzt9RU2Pxw==", "title"=>"Oak Glen Maternity Session", "description"=>"bllop", "commit"=>"Submit Post"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Oak Glen Maternity Session"], ["description", "bllop"], ["created_at", "2020-07-12 14:07:04.778338"], ["updated_at", "2020-07-12 14:07:04.778338"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+No template found for PostsController#create, rendering head :no_content
+Completed 204 No Content in 29ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/" for ::1 at 2020-07-12 08:07:25 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Parameters: {"internal"=>true}
+  Rendering /Users/taylorishimoto/.rvm/gems/ruby-2.6.1/gems/railties-5.0.7.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/taylorishimoto/.rvm/gems/ruby-2.6.1/gems/railties-5.0.7.2/lib/rails/templates/rails/welcome/index.html.erb (2.3ms)
+Completed 200 OK in 11ms (Views: 5.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2020-07-12 08:07:30 -0600
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 192ms (Views: 186.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/posts" for ::1 at 2020-07-12 08:07:38 -0600
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ECRlb5BoFsKeJZDHg7Am4XEBT3WYJn4KDashb36TKZH7Tm/MVOG9xvi1hWbZgctxz0ewWUn7LSzFEfSLo2xN3g==", "title"=>"Orange County Engagement || Thomas F. Riley", "description"=>"poop", "commit"=>"Submit Post"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Orange County Engagement || Thomas F. Riley"], ["description", "poop"], ["created_at", "2020-07-12 14:07:38.196604"], ["updated_at", "2020-07-12 14:07:38.196604"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+No template found for PostsController#create, rendering head :no_content
+Completed 204 No Content in 20ms (ActiveRecord: 1.1ms)
+
+
+  [1m[36mPost Load (1.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+Started GET "/" for ::1 at 2020-07-12 08:11:31 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Parameters: {"internal"=>true}
+  Rendering /Users/taylorishimoto/.rvm/gems/ruby-2.6.1/gems/railties-5.0.7.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/taylorishimoto/.rvm/gems/ruby-2.6.1/gems/railties-5.0.7.2/lib/rails/templates/rails/welcome/index.html.erb (2.3ms)
+Completed 200 OK in 11ms (Views: 5.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2020-07-12 08:11:38 -0600
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 182ms (Views: 176.4ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/posts" for ::1 at 2020-07-12 08:11:47 -0600
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"14QPSl6kjRmQ/uJTgG0OzL9b80G45+8F7QlLlL4WCBs87gXpmi0mHfZu9/LaXONcAR0MbWk6vCMls55wY+lsVA==", "title"=>"Yucaipa Maternity Session", "description"=>"poo poo pee pee", "commit"=>"Submit Post"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Yucaipa Maternity Session"], ["description", "poo poo pee pee"], ["created_at", "2020-07-12 14:11:47.636610"], ["updated_at", "2020-07-12 14:11:47.636610"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/posts/5
+Completed 302 Found in 3ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/posts/5" for ::1 at 2020-07-12 08:11:47 -0600
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 12ms (Views: 8.8ms | ActiveRecord: 0.2ms)
+
+
